@@ -1,5 +1,4 @@
 import random
-from contestants import Contestant
 
 
 class Sweepstake:
@@ -7,6 +6,7 @@ class Sweepstake:
     def __init__(self, name):
         self.contestant_list = {}
         self.name = name
+        self.winner = name
 
     def register_contestant(self, contestant):
         key = len(self.contestant_list) + 1
@@ -15,12 +15,12 @@ class Sweepstake:
     def pick_winner(self):
         # should return a contestant
         sweepstake_winner = random.randint(1, len(self.contestant_list))
-        winner = self.contestant_list.get(sweepstake_winner)
-        print(f'Congrats to {winner}! You are the chosen WINNER!!')
+        self.winner = self.contestant_list.get(sweepstake_winner)
+        print(f'{self.winner.first_name} {self.winner.last_name} is the chosen winner!')
 
     def print_contestant_info(self, contestant):
-        pass
+        print(self.winner.first_name)
+        print(self.winner.last_name)
+        print(self.winner.email)
+        print(self.winner.registration)
 
-
-contestant1 = Contestant('John', 'Henry', 'crfw@gmail.com', 34124)
-contestant2 = Contestant('Ray', 'Alexander', 'ray@gmail.com', 48646)
