@@ -1,8 +1,10 @@
 class Contestant:
 
-    def __init__(self):
-        self.first = first
-        self.last = last
+    def __init__(self, first, last, email, reg):
+        self.first_name = first
+        self.last_name = last
         self.email = email
-        self.address = address
         self.registration = reg
+
+    def notify_if_winner(self):
+        pass
