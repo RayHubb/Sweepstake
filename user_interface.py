@@ -1,2 +1,0 @@
-from sweepstake import Sweepstake
-

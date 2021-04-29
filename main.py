@@ -2,6 +2,7 @@ from sweepstake import Sweepstake
 from contestant import Contestant
 from sweepstake_stack_manager import StackManager
 from sweepstakes_queue_manager import QueueManager
+from marketing_firm import MarketingFirm
 
 # test objects and methods
 sweepstake1 = Sweepstake('Some Sweepstake')
@@ -34,6 +35,13 @@ queue_manager.inset_sweepstake(sweepstake2)
 queue_manager.inset_sweepstake(sweepstake3)
 
 queue_manager.get_sweepstake()
+
+firm1 = MarketingFirm(stack_manager)
+firm1.create_sweepstake('You guessed it another sweepstake')
+
+
+
+
 
 
 # just something to prevent myself from overstepping in the debugger to see end results
