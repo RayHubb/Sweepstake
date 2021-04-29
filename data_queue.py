@@ -8,4 +8,5 @@ class Queue:
         self.queue.append(item)
 
     def dequeue(self):
+        print(self.queue[0].name)
         return self.queue.pop(0)
